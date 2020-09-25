@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:contentPaddingTop="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/img01"
+            android:layout_margin="8dp"/>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="One Piece"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/iv_profile"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is One Piece Character"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@+id/iv_profile"
+            android:layout_below="@+id/tv_name"/>
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_below="@+id/tv_msg"
+            android:src="@drawable/img01"
+            android:scaleType="centerCrop"/>  <!--scaleType="centerCrop" 원본사진 일부분만나옴. 테두리잘림-->
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+<!--cardView 는 frame 을 상속하기때문에 기능이 거의없음-->
+<!--그 안에 다른 레이아웃을 이용(relative, linear..etc)-->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.suek.ex57recyclerview2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">  <!-- clearTextTraffic  인터넷 https:// -->
+        <activity android:name=".DetailActivity" android:parentActivityName=".MainActivity"></activity>  <!--parentActivityName=".MainActivity" 업버튼 눌렀을때 메인페이지로 지정하기-->
+
+
+        <!--업버튼으로 돌아가는 액티비티에 launchMode="singleTop"를 주면 기존 액티비티를 없애지 않고 나타나게 함-->
+        <activity android:name=".MainActivity"  android:launchMode="singleTop">  <!---->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
